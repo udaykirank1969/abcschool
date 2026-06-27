@@ -120,6 +120,49 @@ nav a:hover {
     }
 
 }
+.menu-btn{
+    display:none;
+    background:none;
+    border:none;
+    color:white;
+    font-size:35px;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+
+    .menu-btn{
+        display:block;
+    }
+
+    .nav-links{
+        display:none;
+        flex-direction:column;
+        width:100%;
+        text-align:center;
+        margin-top:20px;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    header{
+        padding:20px;
+    }
+
+    .navbar{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        flex-wrap:wrap;
+    }
+
+    .hero h2{
+        font-size:32px;
+    }
+
+}
 </style>
 </head>
 <body>
