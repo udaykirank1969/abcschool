@@ -4,9 +4,35 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ST Thomas School</title>
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 <link rel="stylesheet" href="css/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" </head>
 <body>
+
+    <!-- Scroll Progress Bar -->
+
+<div id="progress-bar"></div>
+    <!-- ================= LOADER ================= -->
+
+<div id="loader">
+
+    <div class="loader-content">
+
+        <img src="images/logo.png" alt="School Logo">
+
+        <h2>ST Thomas School</h2>
+
+        <p>Loading...</p>
+
+        <div class="loading-bar">
+
+            <span></span>
+
+        </div>
+
+    </div>
+
+</div>
 <header>
  <div class="container">
  <a href="#" class="logo">
@@ -41,8 +67,7 @@
 </section>
 <!-- ================= ABOUT SCHOOL ================= -->
 
-<section class="about">
-
+<section class="about" data-aos="fade-up">
     <div class="about-container">
 
         <div class="about-image">
@@ -85,8 +110,7 @@
 </section>
 <!-- ================= WHY CHOOSE US ================= -->
 
-<section class="why">
-
+<section class="why" data-aos="zoom-in">
     <div class="section-title">
 
         <h4>WHY CHOOSE US</h4>
@@ -148,10 +172,10 @@
     </div>
 
 </section>
-<script src="js/script.js"></script>
+
 <!-- ================= PRINCIPAL MESSAGE ================= -->
 
-<section class="principal">
+<section class="principal" data-aos="fade-right">
 
     <div class="principal-container">
 
@@ -192,7 +216,7 @@
 </section>
 <!-- ================= LATEST NEWS ================= -->
 
-<section class="news">
+<section class="news" data-aos="fade-up">
 
     <div class="section-title">
 
@@ -245,7 +269,7 @@
 </section>
 <!-- ================= GALLERY ================= -->
 
-<section class="gallery">
+<section class="gallery" data-aos="zoom-in">
 
     <div class="section-title">
 
@@ -352,8 +376,7 @@
 </footer>
 <!-- ================= FACILITIES ================= -->
 
-<section class="facilities">
-
+<section class="facilities" data-aos="fade-left">
     <div class="section-title">
 
         <h4>OUR FACILITIES</h4>
@@ -415,9 +438,59 @@
     </div>
 
 </section>
+<!-- ================= STATISTICS ================= -->
+
+<section class="stats" data-aos="zoom-in-up">
+
+    <div class="stats-container">
+
+        <div class="stat-card">
+
+            <i class="fas fa-user-graduate"></i>
+
+            <h2 class="counter" data-target="2000">0</h2>
+
+            <p>Students</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fas fa-chalkboard-teacher"></i>
+
+            <h2 class="counter" data-target="15">0</h2>
+
+            <p>Teachers</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fas fa-award"></i>
+
+            <h2 class="counter" data-target="25">0</h2>
+
+            <p>Years of Excellence</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fas fa-trophy"></i>
+
+            <h2 class="counter" data-target="100">0</h2>
+
+            <p>Success Rate</p>
+
+        </div>
+
+    </div>
+
+</section>
 <!-- ================= ADMISSION CTA ================= -->
 
-<section class="admission-cta">
+<section class="admission-cta" data-aos="fade-up">
+
 
     <div class="cta-content">
 
@@ -439,5 +512,27 @@
     </div>
 
 </section>
+
+
+ 
+<!-- ================= BACK TO TOP ================= -->
+
+<button id="backToTop">
+
+    <i class="fas fa-arrow-up"></i>
+
+</button>
+
+<script src="js/script.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+    duration:1000,
+    once:true,
+    offset:120
+});
+</script>
+
 </body>
 </html>
