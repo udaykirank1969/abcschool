@@ -101,42 +101,7 @@ counterObserver.unobserve(counter);
 });
 
 counters.forEach(counter=>counterObserver.observe(counter));
-// ===============================
-// Back To Top
-// ===============================
 
-
-const backToTop = document.getElementById("backToTop");
-
-if(backToTop){
-
-    window.addEventListener("scroll",()=>{
-
-        if(window.scrollY>400){
-
-            backToTop.classList.add("show");
-
-        }else{
-
-            backToTop.classList.remove("show");
-
-        }
-
-    });
-
-    backToTop.addEventListener("click",()=>{
-
-        window.scrollTo({
-
-            top:0,
-
-            behavior:"smooth"
-
-        });
-
-    });
-
-}
 // ===============================
 // Loading Screen
 // ===============================
@@ -177,3 +142,73 @@ window.addEventListener("scroll", () => {
     progressBar.style.width = progress + "%";
 
 });
+// ===============================
+// Gallery Lightbox
+// ===============================
+
+const galleryImages = document.querySelectorAll(".gallery-item img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeLightbox = document.getElementById("close-lightbox");
+
+galleryImages.forEach(image => {
+
+    image.addEventListener("click", () => {
+
+        lightbox.classList.add("show");
+        lightboxImg.src = image.src;
+
+    });
+
+});
+
+closeLightbox.addEventListener("click", () => {
+
+    lightbox.classList.remove("show");
+
+});
+
+lightbox.addEventListener("click", (e) => {
+
+    if(e.target === lightbox){
+
+        lightbox.classList.remove("show");
+
+    }
+
+});
+// ===============================
+// Back To Top Button
+// ===============================
+
+const backToTop = document.getElementById("backToTop");
+
+if(backToTop){
+
+    window.addEventListener("scroll", () => {
+
+        if(window.pageYOffset > 300){
+
+            backToTop.classList.add("show");
+
+        }else{
+
+            backToTop.classList.remove("show");
+
+        }
+
+    });
+
+    backToTop.addEventListener("click", () => {
+
+        window.scrollTo({
+
+            top:0,
+
+            behavior:"smooth"
+
+        });
+
+    });
+
+}
