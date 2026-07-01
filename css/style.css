@@ -1510,9 +1510,18 @@ color:#FFD54F;
     }
 
     .hero{
-        min-height:100vh;
-        padding:120px 20px 60px;
-    }
+    min-height:100svh;
+    min-height:100dvh;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    background-size:cover;
+    background-position:center;
+}
 
     .overlay{
         width:100%;
